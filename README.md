@@ -18,5 +18,5 @@ $ pip install -r requirements.txt
 ````
 $ export HSL_USERNAME='bla'
 $ export HSL_PASSWORD='bla'
-$ python start.sh
+$ python hslinfo.py
 ````
