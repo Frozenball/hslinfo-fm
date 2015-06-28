@@ -1,46 +1,4 @@
 $(function(){
-    var MORNING = [
-        'Good morning!',
-        'Morgen',
-        'Ni zao',
-        'Ohayo',
-        'Buenos dias',
-        'Bonjour',
-        'Hi sunshine, the earth says hi'
-    ];
-    var DAY = [
-        'Well hello!',
-        'Why hello there.',
-        'Hello',
-        'Yo.',
-        'Greetings!',
-    ];
-    var EVENING = DAY;
-    var NIGHT = [
-        'Good night',
-        'Gute nacht',
-        'Bonne nuit',
-        'Hey you!',
-        'Sweet sight, good night!',
-        'The day is over, the night has come.'
-    ]
-    var STILL_AWAKE = [
-        'Still awake?',
-        'Have sweet dreams',
-        'Huh, party hard?'
-    ]
-
-    var choice = function(arr) {
-        return arr[Math.round(Math.random() * (arr.length-1))];
-    };
-    var changeText = function($selector, arr) {
-        var lastChange = $selector.data('lastChange');
-        if (lastChange == null || (Date.now()-lastChange) > 3600*1000) {
-            console.log(lastChange);
-            $selector.data('lastChange', Date.now());
-            $selector.text(choice(arr));
-        }
-    };
     var mod = function(n, m) {
         return (n + m) % m;
     }
@@ -54,32 +12,6 @@ $(function(){
         var minutes = date.getMinutes();
         var seconds = date.getSeconds();
         //hours = seconds % 24;
-
-        $('.slide-welcome').removeClass('morning morning10 day evening night supernight');
-        if (hours >= 6 && hours < 10) {
-            $('.slide-welcome').addClass('morning');
-            changeText($('.js-welcome-text'), MORNING);
-        }
-        else if (hours >= 10 && hours < 12) {
-            $('.slide-welcome').addClass('morning10');
-            changeText($('.js-welcome-text'), MORNING);
-        }
-        else if (hours >= 12 && hours < 17) {
-            $('.slide-welcome').addClass('day');
-            changeText($('.js-welcome-text'), DAY);
-        }
-        else if (hours >= 17 && hours < 20) {
-            $('.slide-welcome').addClass('evening');
-            changeText($('.js-welcome-text'), EVENING);
-        }
-        else if (hours >= 20 && hours < 24) {
-            $('.slide-welcome').addClass('night');
-            changeText($('.js-welcome-text'), NIGHT);
-        }
-        else {
-            $('.slide-welcome').addClass('supernight');
-            changeText($('.js-welcome-text'), STILL_AWAKE);
-        }
 
         $('.js-clock').text(padding(hours) + ':' + padding(minutes) + ':' + padding(seconds));
         $('.js-date').text(date.getDate()+'.'+(date.getMonth()+1)+'.'+date.getFullYear());
@@ -136,9 +68,6 @@ $(function(){
             updateSlides();
         }
     }, 1000);
-
-    // TODO: ruokalistat
-
 
     $('.slide').css('opacity', 0);
     updateRoutes();
