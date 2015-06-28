@@ -3,6 +3,8 @@
 This is a small application that shows the HSL bus time info on my Nexus 7 tablet.
 This probably should be migrated to Angular or something.
 
+![Image of info screen](https://i.imgur.com/OfnCdOE.jpg)
+
 ## Installing
 
 ````
