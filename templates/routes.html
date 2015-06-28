@@ -1,10 +1,38 @@
-<h1>Maarinsilta</h1>
-<table class="departure-table">
-{% for departure in departures['2215275'] %}
-    <tr>
-        <td class="name">{{ departure.name }}</td>
-        <td class="code_short">{{ departure.code_short }}</td>
-        <td class="time">{{ departure.time }}</td>
-    </tr>
-{% endfor %}
-</table>
+<div class="row">
+  <div class="col-md-4">
+    <h1>Maarinsilta (to Otaniemi)</h1>
+    <table class="departure-table">
+    {% for departure in departures['2215275'] %}
+        <tr>
+            <td class="name">{{ departure.name }}</td>
+            <td class="code_short">{{ departure.code_short }}</td>
+            <td class="time">{{ departure.time }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+  </div>
+  <div class="col-md-4">
+    <h1>Maarinsilta (to Sello)</h1>
+    <table class="departure-table">
+    {% for departure in departures['2222268'] %}
+        <tr>
+            <td class="name">{{ departure.name }}</td>
+            <td class="code_short">{{ departure.code_short }}</td>
+            <td class="time">{{ departure.time }}</td>
+        </tr>
+    {% endfor %}
+  </table>
+  </div>
+  <div class="col-md-4">
+    <h1>Keijuniitty (to Helsinki)</h1>
+    <table class="departure-table">
+    {% for departure in departures['2215232'] %}
+        <tr>
+            <td class="name">{{ departure.name }}</td>
+            <td class="code_short">{{ departure.code_short }}</td>
+            <td class="time">{{ departure.time }}</td>
+        </tr>
+    {% endfor %}
+  </table>
+  </div>
+</div>
