@@ -36,17 +36,17 @@ height: 100%;
     margin-top: 70px;
 }
 .slide-welcome {
-  background-color: orange;
+  background-color: rgb(218, 120, 5);
   padding-left: 40px;
   padding-right: 40px;
 }
 .slide-welcome h1 {
-    font-size: 30px;
+    font-size: 40px;
     color: rgba(255, 255, 255, 0.7);
     text-align: center;
     width: 100%;
     display: block;
-    padding-top: 50px;
+    padding-top: 100px;
 }
 .slide-welcome .weather {
     font-size: 100px;
@@ -56,10 +56,10 @@ height: 100%;
     height: 350px;
     line-height: 350px;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 90px;
     border-radius: 100%;
     position: absolute;
-    right: 30px;
+    right: 50px;
 }
 .weather .temp {
     color: #ecf0f1;
@@ -96,6 +96,6 @@ height: 100%;
 }
 .departure-table {
   width: 100%;
-    font-size: 25px;
+    font-size: 30px;
     margin-top: 30px;
 }

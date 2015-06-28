@@ -43,9 +43,9 @@ if example_request.status_code != 200:
 
 
 STOPS = (
-    Stop('2215275', 5),
-    Stop('2222268', 5),
-    Stop('2215232', 5)
+    Stop('2215275', 8),
+    Stop('2222268', 8),
+    Stop('2215232', 8)
     # Stop('2222233', 3),
     # Stop('2222235', 3),
 )
