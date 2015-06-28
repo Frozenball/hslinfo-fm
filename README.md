@@ -9,6 +9,7 @@ This probably should be migrated to Angular or something.
 $ git clone git@github.com:Frozenball/hslinfo.git
 $ mkvirtualenv hslinfo
 $ pip install -r requirements.txt
+````
 
 ## Running
 
